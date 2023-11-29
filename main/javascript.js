@@ -17,9 +17,40 @@ const getComputerChoice = () => {
         default : alert("error")
         break
     }
-    return randomPick;   
+    return randomPick; //gets the randomly selected answer. 
 }
-console.log(getComputerChoice())
+//Write a function that plays a single round of rock paper scissors.
+const playRound = (playerSelection , computerSelection) => {
+    //I need a way to bring in the player pick as well.
+    //create logic to find a winner given a player and computer input.
+    //remember rock beats scissor scissor beats paper and paper beats rock.
+    switch (computerSelection.getComputerChoice()){ //testing switch case to check players picks and returning the winner.
+        case 'rock': {
+            playerSelection === "scissor"
+            console.log("computer wins rock crushes scissor")
+            computerSelection === 'scissor'
+            console.log('Player wins rock crushes scissor')
+        } break;
+        case 'scissor': {
+            playerSelection === 'paper'
+            console.log('computer wins scissor cuts paper')
+            computerSelection === 'paper'
+            console.log('Player wins scissor cuts paper.')
+        } 
+        break;
+        case 'paper': {
+            playerSelection === 'rock'
+            console.log('computer wins paper covers rock')
+            computerSelection === "rock"
+            console.log('Player wins paper covers rock')
+        }
+        ;
+
+    }
+}
+
+
+
 
 // playGame = (playerSelection, computerSelection) {
 //     // plays the game by putting the choices against each other
