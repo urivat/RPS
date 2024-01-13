@@ -1,0 +1,15 @@
+create a implementation of rock, paper, scissors.
+the game rules are simple rock over scissor scissor over paper and paper over rock are win condditions. 
+winner is best of 5 wins.
+each player selects one item per round. 
+at the end of the round players compare choices made. 
+winner is decidded based on priority over other choice.
+
+run through the game step by step in as much detail as possible to translate to the computer your intentions.
+varibles required.
+get the players choice. ask the player which selection they will chose.
+take player response and use it in the round. 
+get computer response and use it in the round. 
+Get a different response for each round. 
+create functions to capitalize player response so that it is case insensetive.
+remember functions are actions.

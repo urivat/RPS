@@ -48,13 +48,10 @@ function getCompChoice () {
     }
     return stringChoice;
 }
-// console.log(getCompChoice())
 function getPlayerChoice () {
     playerChoice = prompt('Choose one brave one: \n Rock\n Paper\n Scissor\n')
     return capString(playerChoice)
 }
-// console.log(getPlayerChoice())
-
 function playRound (playerChoice , computerChoice) {
     let message = ''
     
@@ -77,13 +74,30 @@ function playRound (playerChoice , computerChoice) {
                    return message
     }
 function game () {
-    let roundCount = 1
+    const div = document.querySelector('div');
+    const button = document.createElement('button');
+    const button2 = document.createElement('button');
+    const button3 = document.createElement('button');
+    button.textContent = ('rock');
+    button2.textContent = ('paper');
+    button3.textContent = ('scissor');
+    div.appendChild(button);
+    div.appendChild(button2);
+    div.appendChild(button3);
+    const btns = document.querySelectorAll('button')
+    btns.forEach( (btn) => {
+        btn.addEventListener('click', () => {
+            playRound();
+        })
+    })
+   
+    // let roundCount = 1
     
-    for(let i = 1; i <= 5 ; i++){
-        console.log(playRound(getPlayerChoice() , getCompChoice()))
-        roundCount = i
-        console.log(`Round ${roundCount}`)
-    }return 
+    // for(let i = 1; i <= 5 ; i++){
+    //     console.log(playRound(getPlayerChoice() , getCompChoice()))
+    //     roundCount = i
+    //     console.log(`Round ${roundCount}`)
+    // }return 
 }
 game()
 
